@@ -1,0 +1,688 @@
+<!-- Surat Untuk Anna
+Developed : Nadhif Ali Ikhsani
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift | Anna</title><audio class="audio" src="musik.mp3" autoplay type="audio" loop=""></audio>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Pacifico&family=Poppins:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+    /* ROOT:: */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+      min-height: 1000px;
+      transition: 0.5s;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      position: fixed;
+      justify-content: space-between;
+      text-align: center;
+      width: 100%;
+      align-items: center;
+      padding: 20px 50px;
+      top: 0;
+      left: 0;
+      z-index: 100000;
+      transition: 0.5s;
+    }
+
+    header .logo {
+      color: white;
+    }
+
+    header .logo:hover {
+      cursor: pointer;
+      position: relative;
+      color: rgb(255, 231, 19);
+    }
+
+    header .navigasi {
+      list-style-type: none;
+      display: flex;
+      text-align: center;
+    }
+
+    header .navigasi li {
+      padding: 10px;
+      width: 100px;
+    }
+
+    header .logo h3 {
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+      font-weight: 900;
+      font-size: 2rem;
+      transition: 0.5s;
+    }
+
+
+    /* Ini Konten Didalam Header */
+    .navigasi {
+      justify-content: center;
+      margin-left: 40px;
+    }
+
+    .navigasi a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .navigasi a:hover {
+      text-decoration: none;
+      color: rgb(219, 187, 7);
+    }
+
+    /* Akhir Header */
+    /* Section 1 */
+    .banner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background: linear-gradient(to right, blue, salmon);
+      opacity: 50%;
+      position: relative;
+      background-repeat: repeat-x;
+      background-size: fit;
+      min-width: 100vh;
+      display: flex;
+      height: 550px;
+      text-align: center;
+
+    }
+
+    .banner .content {
+      letter-spacing: 5px;
+      font-family: 'Cookie';
+      font-size: 32pt;
+      color: white;
+      font-weight: 900;
+      opacity: 100%;
+      /* color: rgb(38, 5, 82); */
+      text-shadow: 3px 5px black;
+      max-width: 700px;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s;
+    }
+
+    .banner .content p {
+      font-size: xx-large;
+      letter-spacing: 3px;
+      text-shadow: none;
+      transform: translateY(15px);
+      font-family: 'Poppins';
+      color: white;
+    }
+
+    .banner .content p:hover {
+      cursor: pointer;
+    }
+
+    .banner .content h2 {
+      font-size: 2em;
+    }
+
+    section.banner .content p {
+      color: #fff;
+      margin-top: 20px;
+      font-family: 'sans-serif';
+
+    }
+
+    .banner .content span {
+      margin-top: 20px;
+      font-family: 'Poppins';
+      font-weight: 800;
+    }
+
+    .banner .content h2,
+    span,
+    p {
+      animation-name: muncul;
+      animation-duration: 1s;
+    }
+
+    .btnMain {
+      position: relative;
+      margin-top: 30px;
+      color: white;
+      text-decoration: none;
+      width: 20%;
+      border-radius: 6px;
+      padding: 10px;
+      height: 50px;
+      color: white;
+      background-color: rgb(129, 127, 127);
+      animation: ease-in-out 1s infinite;
+    }
+
+    .btnMain:hover {
+      background-color: rgb(46, 236, 56);
+      cursor: pointer;
+    }
+
+    /* Sticky Header */
+    header.sticky {
+      box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
+      background-color: rgb(255, 255, 255);
+    }
+
+    header.sticky .logo {
+      color: #000;
+
+    }
+
+    header.sticky .logo h3 {
+      text-decoration: underline;
+      font-family: 'Pacifico', sans-serif;
+      font-weight: 200;
+      letter-spacing: 0.1em;
+      color: blue;
+      opacity: 50%;
+
+    }
+
+    header.sticky .logo span {
+      color: salmon;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: normal;
+      opacity: 90%;
+
+    }
+
+    header.sticky .navigasi a {
+      color: rgb(129, 127, 127);
+    }
+
+    header.sticky .navigasi a:hover {
+      color: #000;
+    }
+
+    /* Akhir Sticky Header */
+
+    /* Section 2 */
+    section.surat {
+      transition: all 0.5s infinity;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    section.surat .content h2,
+    p {
+      color: #000
+    }
+
+    section.surat .quotes {
+      font-size: 1em;
+      font-family: 'Pacifico';
+      color: rgb(148, 147, 147);
+      font-weight: 100;
+      position: absolute;
+      text-align: center;
+      animation-name: muncul;
+      animation-duration: 1s;
+    }
+
+    section.surat .content {
+      justify-content: center;
+      display: flex;
+
+    }
+
+    section.surat .content .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      min-width: 120vh;
+      width: 90%;
+      height: 440px;
+      margin: 10px;
+      border: 10px;
+
+    }
+
+    section.surat .content .card .card-image {
+      border-radius: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: 20%;
+      height: 100%;
+      margin: 10px;
+      box-shadow: 5px 5px 5px lightslategray;
+      background: url('profile.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    section.surat .content .card .card-content {
+      border-radius: 5px;
+      font-family: 'Pacifico';
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: rgb(209, 201, 201);
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: 110vh;
+      height: 60vh;
+    }
+
+    section.surat .content .card .card-content h2 {
+      font-weight: 300;
+      color: rgb(148, 147, 147);
+    }
+
+    section.surat .content .card .card-content p {
+      font-family: 'Courier New', Courier, monospace;
+      transform: translateY(20px);
+      color: rgb(148, 147, 147);
+    }
+
+    /* Akhir Section 2 */
+
+    /* Section 3 */
+
+
+    section.ucapan .content {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+
+    section.ucapan .content h2,
+    p {
+      color: #000
+    }
+
+    section.ucapan .content h3 {
+      font-size: 2em;
+      font-family: 'Pacifico';
+      color: rgb(148, 147, 147);
+      font-weight: 100;
+      position: absolute;
+      text-align: center;
+      animation-name: muncul;
+      animation-duration: 1s;
+    }
+
+    section.ucapan .content p {
+      align-items: center;
+      font-family: 'Poppins';
+      padding: 10px;
+      margin: 5px;
+      width: 100%;
+      background: linear-gradient(to right, blue, salmon);
+      opacity: 50%;
+      color: white;
+      border-radius: 10px;
+    }
+
+    section.ucapan .content a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 2px;
+      padding: 10px;
+      background: linear-gradient(to right, rgb(185, 216, 11), rgb(8, 156, 255));
+      animation: tblGame 1s infinite;
+
+    }
+
+    section.ucapan .content p:nth-child(2) {
+      margin-top: 70px;
+    }
+
+    /* Akhir section surat */
+    /* Section About */
+    section.about .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(238, 237, 237);
+      height: 100px;
+      width: 100%;
+    }
+
+    section.about .content h3 {
+      color: salmon;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: medium;
+      letter-spacing: 1px;
+    }
+
+    section.about .content>span a {
+      color: blue;
+      font-family: 'Pacifico';
+      font-size: medium;
+      letter-spacing: 3px;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    /* Akhir Section About */
+    .line {
+      border: 1px gray dashed;
+      opacity: 40%;
+      transform: translateY(-100px);
+    }
+
+    section.surat .content {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    section.surat .content .card .card-image {
+      width: 300px;
+      height: 80%;
+    }
+
+    section.surat .content .card .card-content {
+      transform: translateY(-100px);
+      width: 80%;
+      height: 80%;
+    }
+
+    section.about .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    section.about .content h3 {
+      font-size: medium;
+    }
+
+    section.about .content span a {
+      color: blue;
+      opacity: 70%;
+    }
+
+    .banner .content p {
+      width: 100%;
+      text-align: center;
+      font-size: medium;
+    }
+
+    .btnMain {
+      width: 200px;
+    }
+
+    .btnMain:hover {
+      cursor: pointer;
+    }
+
+    /* keyframes / Animasi Pada CSS */
+    @keyframes muncul {
+      from {
+        transform: scale(0.1)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    @keyframes tblGame {
+      0% {
+        transform: scaleX(1) scaleY(1);
+      }
+
+      70% {
+        transform: scaleX(1.2) scaleY(1.2);
+      }
+
+      80% {
+        transform: scaleX(1.2) scaleY(1.2);
+      }
+
+      90% {
+        transform: scaleX(1) scaleY(1);
+      }
+    }
+
+    /* Responsive Modell */
+
+    /* Mobile */
+
+    @media screen and (max-width:576px) {
+      html {
+        overflow-x: hidden;
+      }
+
+      header .navigasi {
+        display: none;
+      }
+
+      header .logo {
+        margin-top: 30px;
+        transform: translateX(50px);
+      }
+
+      .banner .content {
+        width: 350px;
+        transform: translateX(-200px);
+      }
+
+      section.surat .content .card .card-content h2 {
+        margin-top: 80px;
+        width: 30%;
+      }
+
+      section.surat .content .card .card-image {
+        width: 30%;
+        height: 80%;
+      }
+
+      section.surat .content .card .card-content p:nth-child(2) {
+        margin-top: 20px;
+        width: 30%;
+        height: 80%;
+      }
+
+      .btnMain {
+        transform: translateX(-220px);
+      }
+
+      section.about .content {
+        transform: translateY(-40px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 100%;
+      }
+
+      section.about .content h3 {
+        text-align: center;
+        padding-top: 80px;
+        width: 300px;
+      }
+
+      header.sticky {
+        height: 10%;
+      }
+
+      header.sticky .logo h3 {
+        text-decoration: underline;
+        font-family: 'Pacifico', sans-serif;
+        font-weight: 200;
+        letter-spacing: 0.1em;
+        transform: translateY(-20px);
+        color: blue;
+        opacity: 50%;
+
+      }
+
+      header.sticky .logo span {
+        color: salmon;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        letter-spacing: normal;
+        opacity: 90%;
+
+      }
+
+    }
+
+    /* Tablet */
+
+    @media screen and (max-width:768px) {
+      html {
+        overflow-x: hidden;
+      }
+
+      .banner .content h2 {
+        margin-top: 100px;
+        position: relative;
+        width: 100%;
+        font-size: 50pt;
+        text-align: center;
+      }
+
+      .banner .content p:nth-child(2) {
+        margin-top: 40px;
+        width: 100%;
+        font-size: medium;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <h3>Gift<span>Anna.</span></h3>
+    </div>
+    <ul class="navigasi">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#surat">Quotes</a></li>
+      <li><a href="#ucapan">Ucapan</a></li>
+      <li><a href="#about">Thanks</a></li>
+    </ul>
+  </header>
+  <section class="home" id="home">
+
+    <div class="banner">
+      <div class="content">
+        <h2>Selamat Ulang Tahun</h2>
+        <p></p>
+        <p class="tglUltah"></p>
+      </div>
+      <a href="" class="btnMain">Putar Musiknya</a>
+    </div>
+  </section>
+  <section class="surat" id="surat">
+    <div class="content">
+      <div class="card">
+        <div class="card-image">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h2>"The Future is always bright for those who always look the bright side of life"</h2>
+          <p>The Picture, when Anna was 9 years old</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ucapan" id="ucapan">
+    <div class="content">
+      <h3>Perlahan Bacanya</h3>
+      <p>Bonjour!</p>
+      <p>Kenalin ya, nama gue nadhif</p>
+      <p>Yang ngirim pesan ini dari jauh</p>
+      <p>Gue asalnya dari tegal bukan semarang</p>
+      <p>Kebetulan nggak sengaja kecantol algoritma instagram waktu itu</p>
+      <p>Di feed gue pada tanggal 11 agustus 2021, muncul video anna struggle to dreams</p>
+      <p>Videonya banyak juga yang react, trus gue kepoin anna sampe gue follow</p>
+      <p>Gausah takut ya kenapa gue bisa dapet informasi tentang anna</p>
+      <p>Gue emang suka ngepoin orang, sumber informasi yang gue cari ada di ppdb jateng, temen" anna juga</p>
+      <p>Barakallah fii umrik ya anna, sudah berumur 20tahun, transisi dari remaja ke dewasa</p>
+      <p>Belajar yang tekun, terus kejar passion dan cita" jangan lupa juga berdoa</p>
+      <p>Semoga aja gue dinotice sama anna, nambah" temen, kan tegal semarang gak jauh juga</p>
+      <p>Gue udah nyisipin gift buat anna, mohon diterima ya, gak seberapa tapi pasti ada kesanya dikit ya</p>
+      <p>Semua yang dikasihin ke anna produk gue sendiri</p>
+      <p>Kabarin ya kalo hadiahnya udah sampe, sampai ketemu di obrolan berikutnya</p>
+      <p>See you! My Friend, tolong ini dibawah diklik tombolnya.</p>
+      <a href="/game/index.html">Mainkan Game!</a>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="content">
+      <h3> “Semua yang perlu kau lakukan adalah mengejar mimpimu sendiri.” – Yami Sukehiro</h3><span><a
+          href="https://instagram.com/nadhifaliikhsanii">@nadhifaliikhsanii</a></span>
+    </div>
+  </section>
+
+  <script>
+    const happy20 = document.querySelector('.content p');
+    const tgl = document.querySelector('.content p:nth-child(2)');
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+
+      header.classList.toggle('sticky', window.scrollY > 0);
+    })
+    let happi = 0;
+    let happy = 0, text;
+    textUcapanSelamat = ' Seanita Febriana Angelica ';
+    textTglUltah = '25 Februari 2003 - 25 Februari 2023';
+
+    function mengetik() {
+      if (happy < textUcapanSelamat.length) {
+        document.querySelector('.content p').innerHTML += textUcapanSelamat.charAt(happy);
+        happy++;
+        setTimeout(mengetik, 100);
+      }
+    }
+
+    function mengetikTanggal() {
+      if (happi < textTglUltah.length) {
+        document.querySelector('.tglUltah').innerHTML += textTglUltah.charAt(happi);
+        happi++;
+        setTimeout(mengetikTanggal, 100);
+      }
+    }
+    mengetik();
+    mengetikTanggal();
+
+  </script>
+</body>
+
+</html>
